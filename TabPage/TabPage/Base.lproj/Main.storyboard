@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TabPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIR-fo-Mep">
+                                <rect key="frame" x="275" y="290" width="49" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-aS-fvz">
+                                <rect key="frame" x="257" y="320.5" width="87" height="30"/>
+                                <state key="normal" title="Go to Page2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wG5-ot-dYK" kind="presentation" id="TOW-IT-Duu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wnY-aS-fvz" firstAttribute="top" secondItem="KIR-fo-Mep" secondAttribute="bottom" constant="10" id="DfM-m3-9TA"/>
+                            <constraint firstAttribute="centerX" secondItem="KIR-fo-Mep" secondAttribute="centerX" id="Q1O-Nf-1NU"/>
+                            <constraint firstAttribute="centerY" secondItem="KIR-fo-Mep" secondAttribute="centerY" id="nPd-qe-DPx"/>
+                            <constraint firstAttribute="centerX" secondItem="wnY-aS-fvz" secondAttribute="centerX" id="ydu-G6-dB5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Page2 View Controller-->
+        <scene sceneID="Lh8-cg-KeS">
+            <objects>
+                <viewController id="wG5-ot-dYK" customClass="Page2ViewController" customModule="TabPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5dN-bP-ZJs"/>
+                        <viewControllerLayoutGuide type="bottom" id="5z0-Tv-34T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NaV-Jy-DmN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2P-pX-Csy">
+                                <rect key="frame" x="275" y="289" width="49" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSl-YC-mJL">
+                                <rect key="frame" x="256" y="318" width="87" height="30"/>
+                                <state key="normal" title="Go to Page1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToPage2:" destination="wG5-ot-dYK" eventType="touchUpInside" id="P1I-qB-aVf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="v2P-pX-Csy" secondAttribute="centerX" id="LWM-WG-5VC"/>
+                            <constraint firstAttribute="centerX" secondItem="KSl-YC-mJL" secondAttribute="centerX" id="Rbm-hG-mVm"/>
+                            <constraint firstItem="KSl-YC-mJL" firstAttribute="top" secondItem="v2P-pX-Csy" secondAttribute="bottom" constant="8" id="Tq8-CN-Dvi"/>
+                            <constraint firstAttribute="centerY" secondItem="v2P-pX-Csy" secondAttribute="centerY" id="gvt-JV-IRw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORI-qo-z2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1203"/>
+        </scene>
+    </scenes>
+</document>
