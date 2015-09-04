@@ -18,6 +18,7 @@ struct CafeData {
         case doutor = "ドトール"
         case excelsior = "エクセルシオール"
     }
+
     enum Image: String {
         case starbucks = "starbucks.jpg"
         case doutor = "doutor.jpg"
