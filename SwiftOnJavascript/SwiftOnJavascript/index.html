@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>SwiftOnJavascript</title>
+</head>
+<body>
+<h1>SwiftOnJavascript</h1>
+<button id="trigger">Push</button>
+<script>
+    var btn = document.getElementById('trigger');
+    btn.addEventListener('touchend', function() {
+       location.href = [
+           'native://command?arg=',
+           encodeURI('SwiftOnJavascript!!!'),
+           '&callback=callbackFunc'
+       ].join('');
+    });
+
+    function callbackFunc(msg) {
+        return alert(msg)
+    }
+</script>
+</body>
+</html>
