@@ -39,4 +39,6 @@
 
 ## storyboard
 
+- 左下に配置したラベルテキストが、javascriptをトリガーに書き換わります
+
 ![storyboard](https://cloud.githubusercontent.com/assets/1150412/9714656/52a6e6fe-5594-11e5-8868-02e205938e13.png)
