@@ -1,0 +1,8 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'AlamofireSample' do
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'Alamofire-SwiftyJSON', :git => "https://github.com/SwiftyJSON/Alamofire-SwiftyJSON.git", :commit => 'e9d4acdc306fd68a7193e8df8120928900649ff6'
+end
